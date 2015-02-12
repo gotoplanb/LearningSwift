@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     var firstContainer: UIView!
     var secondContainer: UIView!
     var thirdContainer: UIView!
-    var fourthCountainer: UIView!
+    var fourthContainer: UIView!
     
     var titleLabel: UILabel!
     
@@ -25,6 +25,13 @@ class ViewController: UIViewController {
     var creditsTitleLabel: UILabel!
     var betTitleLabel: UILabel!
     var winnerPaidTitleLabel: UILabel!
+    
+    // Buttons in fourth container
+    
+    var resetButton: UIButton!
+    var betOneButton: UIButton!
+    var betMaxButton: UIButton!
+    var spinButton: UIButton!
     
     let kMarginForView:CGFloat = 10.0
     let kMarginForSlot:CGFloat = 2.0
@@ -44,11 +51,18 @@ class ViewController: UIViewController {
         setupFirstContainer(self.firstContainer)
         setupSecondContainer(self.secondContainer)
         setupThirdContainer(self.thirdContainer)
+        setupFourthContainer(self.fourthContainer)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    // IBActions
+    
+    func resetButtonPressed(button: UIButton) {
+        println("resetButtonPressed")
     }
 
     func setupContainerViews() {
@@ -64,9 +78,9 @@ class ViewController: UIViewController {
         self.thirdContainer.backgroundColor = UIColor.lightGrayColor()
         self.view.addSubview(self.thirdContainer)
         
-        self.fourthCountainer = UIView(frame: CGRect(x: self.view.bounds.origin.x + kMarginForView, y: firstContainer.frame.height + secondContainer.frame.height + thirdContainer.frame.height, width: self.view.bounds.width - (kMarginForView * 2), height: self.view.bounds.height * kSixth))
-        self.fourthCountainer.backgroundColor = UIColor.blackColor()
-        self.view.addSubview(fourthCountainer)
+        self.fourthContainer = UIView(frame: CGRect(x: self.view.bounds.origin.x + kMarginForView, y: firstContainer.frame.height + secondContainer.frame.height + thirdContainer.frame.height, width: self.view.bounds.width - (kMarginForView * 2), height: self.view.bounds.height * kSixth))
+        self.fourthContainer.backgroundColor = UIColor.blackColor()
+        self.view.addSubview(fourthContainer)
     }
     
     func setupFirstContainer(containerView: UIView) {
@@ -150,6 +164,20 @@ class ViewController: UIViewController {
         self.winnerPaidTitleLabel.sizeToFit()
         self.winnerPaidTitleLabel.center = CGPoint(x: containerView.frame.width * kSixth * 5, y: containerView.frame.height * kThird * 2)
         containerView.addSubview(self.winnerPaidTitleLabel)
+        
+    }
+    
+    func setupFourthContainer(containerView:UIView) {
+        
+        self.resetButton = UIButton()
+        self.resetButton.setTitle("Reset", forState: UIControlState.Normal)
+        self.resetButton.setTitleColor(UIColor.blueColor(), forState: UIControlState.Normal)
+        self.resetButton.titleLabel?.font = UIFont(name: "Superclarendon-Bold", size: 12)
+        self.resetButton.backgroundColor = UIColor.lightGrayColor()
+        self.resetButton.sizeToFit()
+        self.resetButton.center = CGPoint(x: containerView.frame.width * kEighth, y: containerView.frame.height * kHalf)
+        self.resetButton.addTarget(self, action: "resetButtonPressed:", forControlEvents: UIControlEvents.TouchUpInside)
+        containerView.addSubview(self.resetButton)
         
     }
 
