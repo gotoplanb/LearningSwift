@@ -112,7 +112,7 @@ class ViewController: UIViewController {
             for var slotNumber = 0; slotNumber < kNumberOfSlots; ++slotNumber {
                 
                 var slotImageView = UIImageView()
-                slotImageView.backgroundColor = UIColor.yellowColor()
+                slotImageView.backgroundColor = UIColor.whiteColor()
                 slotImageView.frame = CGRect(x: containerView.bounds.origin.x + (containerView.bounds.size.width) * CGFloat(containerNumber) * kThird, y: containerView.bounds.origin.y + (containerView.bounds.size.height * CGFloat(slotNumber) * kThird), width: containerView.bounds.width * kThird - kMarginForSlot, height: containerView.bounds.height * kThird - kMarginForSlot)
                 containerView.addSubview(slotImageView)
             }
