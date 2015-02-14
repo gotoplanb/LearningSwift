@@ -49,11 +49,38 @@ class SlotBrain {
         var starightWinCount = 0
         
         for slotRow in slotsInRows {
-            
+            if checkFlush(slotRow) == true {
+                println("flush")
+                winnings += 1
+                flushWinCount += 1
+            }
+        }
+        
+        if flushWinCount == 3 {
+            println("royal flush")
+            winnings += 15
         }
         
         return winnings
         
+    }
+    
+    class func checkFlush(slotRow: [Slot]) -> Bool {
+
+        let slot1 = slotRow[0]
+        let slot2 = slotRow[1]
+        let slot3 = slotRow[2]
+        
+        if slot1.isRed == true && slot2.isRed == true && slot3.isRed == true {
+            return true
+        }
+        else if slot1.isRed == false && slot2.isRed == false && slot3.isRed == false {
+            return true
+        }
+        else {
+            return false
+        }
+
     }
     
 }
