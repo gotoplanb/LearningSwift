@@ -25,11 +25,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     // UITableViewDataSource
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return 5
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        println(indexPath.row)
+        var cell: TaskCell = tableView.dequeueReusableCellWithIdentifier("myCell") as TaskCell
+        return cell
     }
     
     // UITableViewDelegate
