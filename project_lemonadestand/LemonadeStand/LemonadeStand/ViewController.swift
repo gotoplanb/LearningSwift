@@ -18,7 +18,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var lemonMixCount: UILabel!
     @IBOutlet weak var iceCubeMixCount: UILabel!
     
-    
+    var supplies = Supplies(aMoney: 10, aLemons: 1, aIceCubes: 1)
+    let price = Price()
+    var lemonsToPurchase = 0
+    var iceCubesToPurchase = 0
+    var lemonsToMix = 0
+    var iceCubesToMix = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,10 +46,7 @@ class ViewController: UIViewController {
     
     @IBAction func unpurchaseIceCubeButtonPressed(sender: UIButton) {
     }
-    
-    
 
-    
     @IBAction func mixLemonButtonPressed(sender: UIButton) {
     }
     
@@ -60,5 +62,15 @@ class ViewController: UIViewController {
     @IBAction func startDayButtonPressed(sender: UIButton) {
     }
 
+    func updateMainView() {
+        moneySupplyCount.text = "$\(supplies.money)"
+        lemonSupplycount.text = "\(supplies.lemons) lemons"
+        iceCubeSupplyCount.text = "\(supplies.iceCubes) ice cubes"
+        lemonPurchaseCount.text = "\(lemonsToPurchase)"
+        iceCubePurchaseCount.text = "\(iceCubesToPurchase)"
+        lemonMixCount.text = "\(lemonsToMix)"
+        iceCubeMixCount.text = "\(iceCubesToMix)"
+    }
+    
 }
 
