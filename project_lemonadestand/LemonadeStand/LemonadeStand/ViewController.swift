@@ -26,10 +26,12 @@ class ViewController: UIViewController {
     var iceCubesToMix = 0
     var weatherArray:[[Int]] = [[-10, -9, -5, -7], [5, 8, 10, 9], [22, 25, 27, 23]]
     var weatherToday:[Int] = [0, 0, 0, 0]
+    var weatherImageView:UIImageView = UIImageView(frame: CGRect(x: 20, y: 50, width: 50, height: 50))
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        self.view.addSubview(weatherImageView)
         simulateWeatherToday()
         updateMainView()
     }
@@ -207,6 +209,16 @@ class ViewController: UIViewController {
     func simulateWeatherToday() {
         let index = Int(arc4random_uniform(UInt32(weatherArray.count)))
         weatherToday = weatherArray[index]
+        switch index {
+        case 0:
+            weatherImageView.image = UIImage(named: "cold")
+        case 1:
+            weatherImageView.image = UIImage(named: "mild")
+        case 2:
+            weatherImageView.image = UIImage(named: "warm")
+        default:
+            weatherImageView.image = UIImage(named: "warm")
+        }
     }
     
     func findAverage(data:[Int]) -> Int {
