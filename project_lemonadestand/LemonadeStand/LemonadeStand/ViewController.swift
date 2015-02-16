@@ -37,27 +37,114 @@ class ViewController: UIViewController {
     }
 
     @IBAction func purchaseLemonButtonPressed(sender: UIButton) {
+        
+        if supplies.money >= price.lemon {
+            lemonsToPurchase += 1
+            supplies.money -= price.lemon
+            supplies.lemons += 1
+            updateMainView()
+        }
+        else {
+            showAlertWithText(message: "You don't have enough money")
+        }
+        
     }
     
     @IBAction func unpurchaseLemonButtonPressed(sender: UIButton) {
+        
+        if lemonsToPurchase > 0 {
+            lemonsToPurchase -= 1
+            supplies.money += price.lemon
+            supplies.lemons -= 1
+            updateMainView()
+        }
+        else {
+            showAlertWithText(message: "You have anything to return.")
+        }
+        
     }
     
     @IBAction func purchaseIceCubeButtonPressed(sender: UIButton) {
+        
+        if supplies.money >= price.iceCube {
+            iceCubesToPurchase += 1
+            supplies.money -= price.iceCube
+            supplies.iceCubes += 1
+            updateMainView()
+        }
+        else {
+            showAlertWithText(message: "You don't have enough money.")
+        }
+        
     }
     
     @IBAction func unpurchaseIceCubeButtonPressed(sender: UIButton) {
+        
+        if iceCubesToPurchase > 0 {
+            iceCubesToPurchase -= 1
+            supplies.money += price.iceCube
+            supplies.iceCubes -= 1
+            updateMainView()
+        }
+        else {
+            showAlertWithText(message: "You don't have anything to return.")
+        }
+        
     }
 
     @IBAction func mixLemonButtonPressed(sender: UIButton) {
+        
+        if supplies.lemons > 0 {
+            lemonsToPurchase = 0
+            supplies.lemons -= 1
+            lemonsToMix += 1
+            updateMainView()
+        }
+        else {
+            showAlertWithText(message: "You don't have enough inventory.")
+        }
+        
     }
     
     @IBAction func mixIceCubeButtonPressed(sender: UIButton) {
+        
+        if supplies.iceCubes > 0 {
+            iceCubesToPurchase = 0
+            supplies.iceCubes -= 1
+            iceCubesToMix += 1
+            updateMainView()
+        }
+        else {
+            showAlertWithText(message: "You don't have enough inventory.")
+        }
+        
     }
     
     @IBAction func unmixLemonButtonPressed(sender: UIButton) {
+        
+        if lemonsToMix > 0 {
+            lemonsToPurchase = 0
+            supplies.lemons += 1
+            lemonsToMix -= 1
+            updateMainView()
+        }
+        else {
+            showAlertWithText(message: "You have nothing to un-mix.")
+        }
+        
     }
     
     @IBAction func unmixIceCubeButtonPressed(sender: UIButton) {
+        
+        if iceCubesToMix > 0 {
+            iceCubesToPurchase = 0
+            supplies.iceCubes += 1
+            iceCubesToMix -= 1
+            updateMainView()
+        }
+        else {
+            showAlertWithText(message: "You have nothing to un-mix.")
+        }
     }
     
     @IBAction func startDayButtonPressed(sender: UIButton) {
