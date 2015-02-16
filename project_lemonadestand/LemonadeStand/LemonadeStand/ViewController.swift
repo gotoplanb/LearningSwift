@@ -152,7 +152,8 @@ class ViewController: UIViewController {
     
     @IBAction func startDayButtonPressed(sender: UIButton) {
         
-        let customers = Int(arc4random_uniform(UInt32(11)))
+        let average = findAverage(weatherToday)
+        let customers = Int(arc4random_uniform(UInt32(abs(average))))
         println("customers: \(customers)")
         
         if lemonsToMix == 0 || iceCubesToMix == 0 {
@@ -206,6 +207,16 @@ class ViewController: UIViewController {
     func simulateWeatherToday() {
         let index = Int(arc4random_uniform(UInt32(weatherArray.count)))
         weatherToday = weatherArray[index]
+    }
+    
+    func findAverage(data:[Int]) -> Int {
+        var sum = 0
+        for datum in data {
+            sum += datum
+        }
+        var average = Double(sum) / Double (data.count)
+        var rounded:Int = Int(ceil(average))
+        return rounded
     }
     
 }
