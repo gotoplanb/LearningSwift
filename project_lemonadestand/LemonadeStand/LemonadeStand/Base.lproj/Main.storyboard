@@ -121,7 +121,7 @@
                                     <rect key="frame" x="239" y="201" width="30" height="30"/>
                                 </variation>
                                 <connections>
-                                    <action selector="purchaseIceCubeButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="E85-2C-Fuz"/>
+                                    <action selector="purchaseIceCubeButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="G9f-kt-UaV"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uUC-Zu-WDQ">
@@ -330,7 +330,6 @@
                         <outlet property="lemonPurchaseCount" destination="SHB-au-UzS" id="neh-GD-m7c"/>
                         <outlet property="lemonSupplycount" destination="d6Y-XO-ZTg" id="CNh-PM-CEO"/>
                         <outlet property="moneySupplyCount" destination="yur-DC-fCi" id="zPO-TD-ZXq"/>
-                        <outlet property="purchaseIceCubeButtonPressed" destination="2Uh-aG-7GZ" id="85A-83-z1v"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
