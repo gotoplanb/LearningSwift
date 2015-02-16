@@ -24,10 +24,13 @@ class ViewController: UIViewController {
     var iceCubesToPurchase = 0
     var lemonsToMix = 0
     var iceCubesToMix = 0
+    var weatherArray:[[Int]] = [[-10, -9, -5, -7], [5, 8, 10, 9], [22, 25, 27, 23]]
+    var weatherToday:[Int] = [0, 0, 0, 0]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        simulateWeatherToday()
         updateMainView()
     }
 
@@ -172,9 +175,15 @@ class ViewController: UIViewController {
                     println("Paid")
                 }
                 else  {
-                    print("else statement evaluating")
+                    println("else statement evaluating")
                 }
             }
+            lemonsToPurchase = 0
+            iceCubesToPurchase  = 0
+            lemonsToMix = 0
+            iceCubesToMix = 0
+            simulateWeatherToday()
+            updateMainView()
         }
     }
 
@@ -192,6 +201,11 @@ class ViewController: UIViewController {
         var alert = UIAlertController(title: header, message: message, preferredStyle: UIAlertControllerStyle.Alert)
         alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
         self.presentViewController(alert, animated: true, completion: nil)
+    }
+    
+    func simulateWeatherToday() {
+        let index = Int(arc4random_uniform(UInt32(weatherArray.count)))
+        weatherToday = weatherArray[index]
     }
     
 }
