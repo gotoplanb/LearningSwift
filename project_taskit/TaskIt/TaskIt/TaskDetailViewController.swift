@@ -10,10 +10,15 @@ import UIKit
 
 class TaskDetailViewController: UIViewController {
 
+    var detailTaskModel: TaskModel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        println(detailTaskModel.task)
+        
     }
 
     override func didReceiveMemoryWarning() {
