@@ -33,6 +33,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
         self.tableView.reloadData()
     }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        tableView.reloadData()
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
