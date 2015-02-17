@@ -12,12 +12,17 @@ class TaskDetailViewController: UIViewController {
 
     var detailTaskModel: TaskModel!
     
+    @IBOutlet weak var taskTextField: UITextField!
+    @IBOutlet weak var subtaskTextField: UITextField!
+    @IBOutlet weak var dueDatePicker: UIDatePicker!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         
-        println(detailTaskModel.task)
+        self.taskTextField.text = detailTaskModel.task
+        self.subtaskTextField.text = detailTaskModel.task
         
     }
 

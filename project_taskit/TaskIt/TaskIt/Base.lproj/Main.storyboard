@@ -169,6 +169,11 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="dueDatePicker" destination="GcN-63-rUE" id="GVK-co-tNk"/>
+                        <outlet property="subtaskTextField" destination="B27-dw-jHr" id="dWx-sX-Iul"/>
+                        <outlet property="taskTextField" destination="Hg8-28-GPs" id="2iW-eA-xPO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mgO-5l-wyB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
