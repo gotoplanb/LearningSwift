@@ -132,6 +132,7 @@
                         <viewControllerLayoutGuide type="bottom" id="DmM-Et-cgc"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="HRV-ht-oel">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Task" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hg8-28-GPs">
@@ -203,6 +204,7 @@
                         <viewControllerLayoutGuide type="bottom" id="sV3-mX-smA"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Mue-vy-QTn">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ra7-tM-5af">
@@ -230,7 +232,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="191" width="304" height="30"/>
+                                    <rect key="frame" x="16" y="192" width="304" height="30"/>
                                 </variation>
                             </textField>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="GRs-sF-G3h">
@@ -239,7 +241,7 @@
                                     <!--2015-02-17 03:45:36 +0000-->
                                 </date>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="268" width="320" height="162"/>
+                                    <rect key="frame" x="0.0" y="269" width="320" height="162"/>
                                 </variation>
                             </datePicker>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Task" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OZE-bw-9uQ">
@@ -305,6 +307,11 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="dueDatePicker" destination="GRs-sF-G3h" id="J2u-uw-dCH"/>
+                        <outlet property="subtaskTextField" destination="wKz-pg-imN" id="0p1-K1-0aT"/>
+                        <outlet property="taskTextField" destination="9Cn-RB-r3f" id="1y7-sZ-Ngm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EAP-4m-xSA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
