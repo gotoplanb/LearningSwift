@@ -24,13 +24,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         let task1 = TaskModel(task: "Study French", subTask: "Verbs", date: date1, completed: false)
         let task2 = TaskModel(task: "Eat Dinner", subTask: "burgers", date: date2, completed: false)
-        
-        let taskArray = [
-            task1,
-            task2,
-            TaskModel(task: "Gym", subTask: "leg day", date: date3, completed: false)
-        ]
+        let taskArray = [task1, task2, TaskModel(task: "Gym", subTask: "leg day", date: date3, completed: false)]
 
+        var completedArray = [TaskModel(task: "Code", subTask: "Task project", date: date2, completed: true)]
+        
+        baseArray = [taskArray, completedArray]
+        
         self.tableView.reloadData()
     }
     
