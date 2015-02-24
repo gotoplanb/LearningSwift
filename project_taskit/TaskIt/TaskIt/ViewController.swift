@@ -121,10 +121,16 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
         let thisTask = baseArray[indexPath.section][indexPath.row]
 
-        var doneTask = TaskModel(task: thisTask.task, subTask: thisTask.subTask, date: thisTask.date, completed: true)
+        if indexPath.section == 0 {
+            var doneTask = TaskModel(task: thisTask.task, subTask: thisTask.subTask, date: thisTask.date, completed: true)
+            baseArray[1].append(doneTask)
+        }
+        else {
+            var newTask = TaskModel(task: thisTask.task, subTask: thisTask.subTask, date: thisTask.date, completed: false)
+            baseArray[0].append(newTask)
+        }
         
         baseArray[indexPath.section].removeAtIndex(indexPath.row)
-        baseArray[1].append(doneTask)
         tableView.reloadData()
     
     }
