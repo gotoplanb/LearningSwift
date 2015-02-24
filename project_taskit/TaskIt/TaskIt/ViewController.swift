@@ -36,8 +36,14 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        tableView.reloadData()
-    }
+
+        taskArray = taskArray.sorted {
+            (taskOne:TaskModel, taskTwo:TaskModel) -> Bool in
+            return taskOne.date.timeIntervalSince1970 < taskTwo.date.timeIntervalSince1970
+            
+        }
+        
+        tableView.reloadData()    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -93,6 +99,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         performSegueWithIdentifier("showTaskDetail", sender: self)
     
     }
+    
+    // Helps
+    
+    
 
 }
 
