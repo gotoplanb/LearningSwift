@@ -54,7 +54,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         if segue.identifier == "showTaskDetail" {
             let detailVC: TaskDetailViewController = segue.destinationViewController as TaskDetailViewController
             let indexPath = self.tableView.indexPathForSelectedRow()
-            let thisTask = taskArray[indexPath!.row]
+            let thisTask = baseArray[indexPath!.section][indexPath!.row]
             detailVC.detailTaskModel = thisTask
             detailVC.mainVC = self
         }
@@ -71,13 +71,17 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     // UITableViewDataSource
 
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return baseArray.count
+    }
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return taskArray.count
+        return baseArray[section].count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let thisTask = taskArray[indexPath.row]
+        let thisTask = baseArray[indexPath.section][indexPath.row]
         
         var cell: TaskCell = tableView.dequeueReusableCellWithIdentifier("myCell") as TaskCell
         
