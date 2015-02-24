@@ -100,10 +100,24 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         println(indexPath.row)
 
         performSegueWithIdentifier("showTaskDetail", sender: self)
-    
+        
+        
     }
     
-    // Helps
+    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 25
+    }
+    
+    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if section == 0 {
+            return "To do"
+        }
+        else {
+            return "Completed"
+        }
+    }
+    
+    // Helpers
     
     
 
