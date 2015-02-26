@@ -15,7 +15,6 @@ class TaskDetailViewController: UIViewController {
     @IBOutlet weak var dueDatePicker: UIDatePicker!
     
     var detailTaskModel: TaskModel!
-    var mainVC: ViewController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
