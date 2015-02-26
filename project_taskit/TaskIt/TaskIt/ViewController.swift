@@ -30,14 +30,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-
-        baseArray[0] = baseArray[0].sorted {
-            (taskOne:TaskModel, taskTwo:TaskModel) -> Bool in
-            return taskOne.date.timeIntervalSince1970 < taskTwo.date.timeIntervalSince1970
-            
-        }
-        
-        tableView.reloadData()    }
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -137,7 +130,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
         let fetchRequest = NSFetchRequest(entityName: "TaskModel")
         let sortDescriptor = NSSortDescriptor(key: "date", ascending: true)
-        fetchRequest.sortDescriptors = [sortDescriptor]
+        let completedDescriptor = NSSortDescriptor(key: "completed", ascending: true)
+        fetchRequest.sortDescriptors = [completedDescriptor, sortDescriptor]
         
         return fetchRequest
 
@@ -145,7 +139,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
     func getFetchedResultsController() -> NSFetchedResultsController {
         
-        fetchedResultsController = NSFetchedResultsController(fetchRequest: taskFetchRequest(), managedObjectContext: managedObjectContext, sectionNameKeyPath: nil, cacheName: nil)
+        fetchedResultsController = NSFetchedResultsController(fetchRequest: taskFetchRequest(), managedObjectContext: managedObjectContext, sectionNameKeyPath: "completed", cacheName: nil)
         
         return fetchedResultsController
         
