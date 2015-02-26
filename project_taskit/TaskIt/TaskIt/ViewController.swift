@@ -7,17 +7,26 @@
 //
 
 import UIKit
+import CoreData
 
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, NSFetchedResultsControllerDelegate {
 
     @IBOutlet weak var tableView: UITableView!
+    
+    let managedObjectContext = (UIApplication.sharedApplication().delegate as AppDelegate).managedObjectContext!
+
+    var fetchedResultsController: NSFetchedResultsController = NSFetchedResultsController()
     
     var baseArray: [[TaskModel]] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        fetchedResultsController = getFetchedResultsController()
+        fetchedResultsController.delegate = self
+        fetchedResultsController.performFetch(nil)
         
     }
     
@@ -125,7 +134,35 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     // Helpers
     
-    
+    func taskFetchRequest() -> NSFetchRequest {
 
+        let fetchRequest = NSFetchRequest(entityName: "TaskModel")
+        let sortDescriptor = NSSortDescriptor(key: "date", ascending: true)
+        fetchRequest.sortDescriptors = [sortDescriptor]
+        
+        return fetchRequest
+
+    }
+
+    func getFetchedResultsController() -> NSFetchedResultsController {
+        
+        fetchedResultsController = NSFetchedResultsController(fetchRequest: taskFetchRequest(), managedObjectContext: managedObjectContext, sectionNameKeyPath: nil, cacheName: nil)
+        
+        return fetchedResultsController
+        
+    }
+    
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
