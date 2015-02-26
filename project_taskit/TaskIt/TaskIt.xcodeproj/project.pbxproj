@@ -18,6 +18,7 @@
 		633660DE1A92DEF7008CB437 /* TaskDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633660DD1A92DEF7008CB437 /* TaskDetailViewController.swift */; };
 		633660E01A92E8DE008CB437 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633660DF1A92E8DE008CB437 /* Date.swift */; };
 		633660E21A92EF44008CB437 /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633660E11A92EF44008CB437 /* AddTaskViewController.swift */; };
+		63B5998F1A9ED20C00D63B50 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63B5998E1A9ED20C00D63B50 /* CoreData.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		633660DD1A92DEF7008CB437 /* TaskDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskDetailViewController.swift; sourceTree = "<group>"; };
 		633660DF1A92E8DE008CB437 /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		633660E11A92EF44008CB437 /* AddTaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
+		63B5998E1A9ED20C00D63B50 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63B5998F1A9ED20C00D63B50 /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,6 +108,7 @@
 		633660B71A92A063008CB437 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				63B5998E1A9ED20C00D63B50 /* CoreData.framework */,
 				633660B81A92A063008CB437 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -427,6 +431,7 @@
 				633660D51A92A063008CB437 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		633660D61A92A063008CB437 /* Build configuration list for PBXNativeTarget "TaskItTests" */ = {
 			isa = XCConfigurationList;
@@ -435,6 +440,7 @@
 				633660D81A92A063008CB437 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
