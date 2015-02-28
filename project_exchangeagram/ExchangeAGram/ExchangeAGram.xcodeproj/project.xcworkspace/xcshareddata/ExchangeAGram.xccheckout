@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>3BDE1DE6-9D55-4859-91B1-51712428C72E</string>
+	<key>IDESourceControlProjectName</key>
+	<string>ExchangeAGram</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>847834BC1304BB3B0687247EB1E7A1834AA711BF</key>
+		<string>github.com:gotoplanb/LearningSwift.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>project_exchangeagram/ExchangeAGram/ExchangeAGram.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>847834BC1304BB3B0687247EB1E7A1834AA711BF</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:gotoplanb/LearningSwift.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>847834BC1304BB3B0687247EB1E7A1834AA711BF</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>847834BC1304BB3B0687247EB1E7A1834AA711BF</string>
+			<key>IDESourceControlWCCName</key>
+			<string>LearningSwift</string>
+		</dict>
+	</array>
+</dict>
+</plist>
