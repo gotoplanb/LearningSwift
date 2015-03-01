@@ -14,6 +14,7 @@
 		634558911AA27DA300E12EAC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6345588F1AA27DA300E12EAC /* LaunchScreen.xib */; };
 		6345589D1AA27DA300E12EAC /* ExchangeAGramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6345589C1AA27DA300E12EAC /* ExchangeAGramTests.swift */; };
 		634558A71AA2BC1400E12EAC /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634558A61AA2BC1400E12EAC /* FeedViewController.swift */; };
+		634558A91AA2BE8D00E12EAC /* FeedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634558A81AA2BE8D00E12EAC /* FeedCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		6345589B1AA27DA300E12EAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6345589C1AA27DA300E12EAC /* ExchangeAGramTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeAGramTests.swift; sourceTree = "<group>"; };
 		634558A61AA2BC1400E12EAC /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		634558A81AA2BE8D00E12EAC /* FeedCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 			children = (
 				634558831AA27DA300E12EAC /* AppDelegate.swift */,
 				634558A61AA2BC1400E12EAC /* FeedViewController.swift */,
+				634558A81AA2BE8D00E12EAC /* FeedCollectionViewCell.swift */,
 				6345588A1AA27DA300E12EAC /* Main.storyboard */,
 				6345588D1AA27DA300E12EAC /* Images.xcassets */,
 				6345588F1AA27DA300E12EAC /* LaunchScreen.xib */,
@@ -217,6 +220,7 @@
 			files = (
 				634558841AA27DA300E12EAC /* AppDelegate.swift in Sources */,
 				634558A71AA2BC1400E12EAC /* FeedViewController.swift in Sources */,
+				634558A91AA2BE8D00E12EAC /* FeedCollectionViewCell.swift in Sources */,
 				634558871AA27DA300E12EAC /* ExchangeAGram.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
