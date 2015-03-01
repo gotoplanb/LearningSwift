@@ -83,7 +83,9 @@ class FeedViewController: UIViewController, UICollectionViewDataSource, UICollec
         feedItem.image = imageData
         feedItem.caption = "Test caption."
         (UIApplication.sharedApplication().delegate as AppDelegate).saveContext()
+        feedArray.append(feedItem)
         self.dismissViewControllerAnimated(true, completion: nil)
+        self.collectionView.reloadData()
     }
     
     
@@ -94,11 +96,23 @@ class FeedViewController: UIViewController, UICollectionViewDataSource, UICollec
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        return feedArray.count
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        return UICollectionViewCell()
+        var cell: FeedCollectionViewCell = collectionView.dequeueReusableCellWithReuseIdentifier("Cell", forIndexPath: indexPath) as FeedCollectionViewCell
+        let thisItem = feedArray[indexPath.row] as FeedItem
+        cell.imageView.image = UIImage(data: thisItem.image)
+        cell.captionLabel.text = thisItem.caption
+        return cell
     }
 
 }
+
+
+
+
+
+
+
+
