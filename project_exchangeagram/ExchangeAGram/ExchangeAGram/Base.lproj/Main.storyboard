@@ -59,7 +59,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="SHn-OC-yY2">
-                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="PD7-ps-QMp"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="PD7-ps-QMp">
+                            <connections>
+                                <action selector="snapBarButtonItemTapped:" destination="BYZ-38-t0r" id="zdW-iA-7xD"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="i5n-Fb-Z23" id="Tgb-bF-fvE"/>

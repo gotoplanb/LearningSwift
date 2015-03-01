@@ -15,6 +15,7 @@
 		6345589D1AA27DA300E12EAC /* ExchangeAGramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6345589C1AA27DA300E12EAC /* ExchangeAGramTests.swift */; };
 		634558A71AA2BC1400E12EAC /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634558A61AA2BC1400E12EAC /* FeedViewController.swift */; };
 		634558A91AA2BE8D00E12EAC /* FeedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634558A81AA2BE8D00E12EAC /* FeedCollectionViewCell.swift */; };
+		634558AB1AA2C0B400E12EAC /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 634558AA1AA2C0B400E12EAC /* MobileCoreServices.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		6345589C1AA27DA300E12EAC /* ExchangeAGramTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeAGramTests.swift; sourceTree = "<group>"; };
 		634558A61AA2BC1400E12EAC /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		634558A81AA2BE8D00E12EAC /* FeedCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedCollectionViewCell.swift; sourceTree = "<group>"; };
+		634558AA1AA2C0B400E12EAC /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				634558AB1AA2C0B400E12EAC /* MobileCoreServices.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +99,7 @@
 		634558811AA27DA300E12EAC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				634558AA1AA2C0B400E12EAC /* MobileCoreServices.framework */,
 				634558821AA27DA300E12EAC /* Info.plist */,
 			);
 			name = "Supporting Files";
