@@ -9,11 +9,11 @@
 /* Begin PBXBuildFile section */
 		634558841AA27DA300E12EAC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634558831AA27DA300E12EAC /* AppDelegate.swift */; };
 		634558871AA27DA300E12EAC /* ExchangeAGram.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 634558851AA27DA300E12EAC /* ExchangeAGram.xcdatamodeld */; };
-		634558891AA27DA300E12EAC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634558881AA27DA300E12EAC /* ViewController.swift */; };
 		6345588C1AA27DA300E12EAC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6345588A1AA27DA300E12EAC /* Main.storyboard */; };
 		6345588E1AA27DA300E12EAC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6345588D1AA27DA300E12EAC /* Images.xcassets */; };
 		634558911AA27DA300E12EAC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6345588F1AA27DA300E12EAC /* LaunchScreen.xib */; };
 		6345589D1AA27DA300E12EAC /* ExchangeAGramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6345589C1AA27DA300E12EAC /* ExchangeAGramTests.swift */; };
+		634558A71AA2BC1400E12EAC /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634558A61AA2BC1400E12EAC /* FeedViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,13 +31,13 @@
 		634558821AA27DA300E12EAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		634558831AA27DA300E12EAC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		634558861AA27DA300E12EAC /* ExchangeAGram.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ExchangeAGram.xcdatamodel; sourceTree = "<group>"; };
-		634558881AA27DA300E12EAC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6345588B1AA27DA300E12EAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6345588D1AA27DA300E12EAC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		634558901AA27DA300E12EAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		634558961AA27DA300E12EAC /* ExchangeAGramTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExchangeAGramTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6345589B1AA27DA300E12EAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6345589C1AA27DA300E12EAC /* ExchangeAGramTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeAGramTests.swift; sourceTree = "<group>"; };
+		634558A61AA2BC1400E12EAC /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				634558831AA27DA300E12EAC /* AppDelegate.swift */,
-				634558881AA27DA300E12EAC /* ViewController.swift */,
+				634558A61AA2BC1400E12EAC /* FeedViewController.swift */,
 				6345588A1AA27DA300E12EAC /* Main.storyboard */,
 				6345588D1AA27DA300E12EAC /* Images.xcassets */,
 				6345588F1AA27DA300E12EAC /* LaunchScreen.xib */,
@@ -215,8 +215,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				634558891AA27DA300E12EAC /* ViewController.swift in Sources */,
 				634558841AA27DA300E12EAC /* AppDelegate.swift in Sources */,
+				634558A71AA2BC1400E12EAC /* FeedViewController.swift in Sources */,
 				634558871AA27DA300E12EAC /* ExchangeAGram.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -411,6 +411,7 @@
 				634558A21AA27DA300E12EAC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		634558A31AA27DA300E12EAC /* Build configuration list for PBXNativeTarget "ExchangeAGramTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +420,7 @@
 				634558A51AA27DA300E12EAC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
