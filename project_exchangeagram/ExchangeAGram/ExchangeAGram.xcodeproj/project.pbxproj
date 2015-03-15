@@ -17,6 +17,7 @@
 		634558A91AA2BE8D00E12EAC /* FeedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634558A81AA2BE8D00E12EAC /* FeedCollectionViewCell.swift */; };
 		634558AB1AA2C0B400E12EAC /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 634558AA1AA2C0B400E12EAC /* MobileCoreServices.framework */; };
 		634558AD1AA2C85E00E12EAC /* FeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634558AC1AA2C85E00E12EAC /* FeedItem.swift */; };
+		63E2621B1AB51D6700F40E6F /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E2621A1AB51D6700F40E6F /* FilterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		634558A81AA2BE8D00E12EAC /* FeedCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedCollectionViewCell.swift; sourceTree = "<group>"; };
 		634558AA1AA2C0B400E12EAC /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		634558AC1AA2C85E00E12EAC /* FeedItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedItem.swift; sourceTree = "<group>"; };
+		63E2621A1AB51D6700F40E6F /* FilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 			children = (
 				634558831AA27DA300E12EAC /* AppDelegate.swift */,
 				634558A61AA2BC1400E12EAC /* FeedViewController.swift */,
+				63E2621A1AB51D6700F40E6F /* FilterViewController.swift */,
 				634558A81AA2BE8D00E12EAC /* FeedCollectionViewCell.swift */,
 				6345588A1AA27DA300E12EAC /* Main.storyboard */,
 				6345588D1AA27DA300E12EAC /* Images.xcassets */,
@@ -225,6 +228,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63E2621B1AB51D6700F40E6F /* FilterViewController.swift in Sources */,
 				634558841AA27DA300E12EAC /* AppDelegate.swift in Sources */,
 				634558A71AA2BC1400E12EAC /* FeedViewController.swift in Sources */,
 				634558A91AA2BE8D00E12EAC /* FeedCollectionViewCell.swift in Sources */,
