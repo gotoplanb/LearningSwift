@@ -16,7 +16,7 @@
 		634558A71AA2BC1400E12EAC /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634558A61AA2BC1400E12EAC /* FeedViewController.swift */; };
 		634558A91AA2BE8D00E12EAC /* FeedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634558A81AA2BE8D00E12EAC /* FeedCollectionViewCell.swift */; };
 		634558AB1AA2C0B400E12EAC /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 634558AA1AA2C0B400E12EAC /* MobileCoreServices.framework */; };
-		634558AD1AA2C85E00E12EAC /* FeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634558AC1AA2C85E00E12EAC /* FeedItem.swift */; };
+		63C98D581AD09B0600455360 /* FeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C98D571AD09B0600455360 /* FeedItem.swift */; };
 		63E2621B1AB51D6700F40E6F /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E2621A1AB51D6700F40E6F /* FilterViewController.swift */; };
 		63E2621D1AB5241500F40E6F /* FilterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E2621C1AB5241500F40E6F /* FilterCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -45,7 +45,7 @@
 		634558A61AA2BC1400E12EAC /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		634558A81AA2BE8D00E12EAC /* FeedCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedCollectionViewCell.swift; sourceTree = "<group>"; };
 		634558AA1AA2C0B400E12EAC /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
-		634558AC1AA2C85E00E12EAC /* FeedItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedItem.swift; sourceTree = "<group>"; };
+		63C98D571AD09B0600455360 /* FeedItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeedItem.swift; path = ../FeedItem.swift; sourceTree = "<group>"; };
 		63E2621A1AB51D6700F40E6F /* FilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 		63E2621C1AB5241500F40E6F /* FilterCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -98,8 +98,7 @@
 				6345588A1AA27DA300E12EAC /* Main.storyboard */,
 				6345588D1AA27DA300E12EAC /* Images.xcassets */,
 				6345588F1AA27DA300E12EAC /* LaunchScreen.xib */,
-				634558851AA27DA300E12EAC /* ExchangeAGram.xcdatamodeld */,
-				634558AC1AA2C85E00E12EAC /* FeedItem.swift */,
+				63C98D591AD09B2000455360 /* Model */,
 				634558811AA27DA300E12EAC /* Supporting Files */,
 			);
 			path = ExchangeAGram;
@@ -129,6 +128,15 @@
 				6345589B1AA27DA300E12EAC /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		63C98D591AD09B2000455360 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				634558851AA27DA300E12EAC /* ExchangeAGram.xcdatamodeld */,
+				63C98D571AD09B0600455360 /* FeedItem.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,8 +243,8 @@
 				634558841AA27DA300E12EAC /* AppDelegate.swift in Sources */,
 				634558A71AA2BC1400E12EAC /* FeedViewController.swift in Sources */,
 				634558A91AA2BE8D00E12EAC /* FeedCollectionViewCell.swift in Sources */,
-				634558AD1AA2C85E00E12EAC /* FeedItem.swift in Sources */,
 				634558871AA27DA300E12EAC /* ExchangeAGram.xcdatamodeld in Sources */,
+				63C98D581AD09B0600455360 /* FeedItem.swift in Sources */,
 				63E2621D1AB5241500F40E6F /* FilterCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -363,6 +371,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ExchangeAGram/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -373,6 +382,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ExchangeAGram/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
